@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital Mechanics Engine</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #0a0a0a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 1px solid #333;
+            background-color: #000;
+            display: block;
+            margin: 20px auto;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px;
+        }
+        .info {
+            text-align: center;
+            margin: 10px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: 1px solid #555;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Orbital Mechanics Engine</h1>
+    <div class="info">
+        <p>Watch planets orbit around the central star using realistic orbital mechanics</p>
+        <p>Each planet follows Kepler's laws of planetary motion</p>
+    </div>
+    
+    <canvas id="canvas" width="1000" height="800"></canvas>
+    
+    <div class="controls">
+        <button onclick="togglePause()">Pause/Resume</button>
+        <button onclick="toggleTrails()">Toggle Trails</button>
+        <button onclick="resetSimulation()">Reset</button>
+        <button onclick="changeSpeed(-1)">Slower</button>
+        <button onclick="changeSpeed(1)">Faster</button>
+    </div>
+    
+    <div class="info">
+        <p id="speedInfo">Speed: 1x</p>
+        <p>Use controls to pause, toggle orbital trails, reset, or change simulation speed</p>
+    </div>
+
+    <script src="orbital-engine.js"></script>
+</body>
+</html>
